@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慵懶食光 | 早午餐咖啡廳全攻略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brunch-cream': '#FDFBF7',
+                        'brunch-accent': '#D4A373',
+                        'brunch-dark': '#432818',
+                        'brunch-glass': 'rgba(255, 255, 255, 0.7)',
+                        'brunch-soft-bg': '#F7EFE5'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #432818;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(139, 94, 60, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #432818 0%, #99582a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-padding {
+            padding: 5rem 1.5rem;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .bento-item {
+            border-radius: 2rem;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        ::selection {
+            background: #D4A373;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center transition-all duration-300">
+        <div class="glass-card px-6 py-3 rounded-full flex items-center space-x-2">
+            <span class="text-xl font-display font-extrabold tracking-tighter gradient-text">BRUNCH.CO</span>
+        </div>
+        <div class="glass-card px-4 py-3 rounded-full hidden md:flex space-x-6 text-sm font-medium">
+            <span class="opacity-50">M11408025</span>
+            <span class="text-brunch-accent underline underline-offset-4">Article</span>
+            <span class="opacity-70 hover:opacity-100 cursor-pointer">Guide</span>
+            <span class="opacity-70 hover:opacity-100 cursor-pointer">Locations</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full -z-10 bg-[radial-gradient(circle_at_50%_50%,_#f9f3e9_0%,_#fdfbf7_100%)]"></div>
+        
+        <!-- Background decorative circles -->
+        <div class="absolute top-20 right-[-5%] w-96 h-96 bg-brunch-accent opacity-5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-10 left-[-5%] w-80 h-80 bg-orange-200 opacity-10 blur-[100px] rounded-full"></div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in-up">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-brunch-accent/10 text-brunch-accent font-semibold text-sm mb-6 tracking-wider">LIFESTYLE & FOOD</span>
+                <h1 class="text-5xl lg:text-7xl font-display font-extrabold mb-8 leading-[1.1] gradient-text">
+                    慵懶食光：<br><span class="font-light italic text-brunch-accent">不只是吃飽</span>
+                </h1>
+                <p class="text-lg lg:text-xl opacity-80 max-w-xl mb-10 leading-loose">
+                    早午餐是一場生活儀式的進化，也是一場對忙碌週間的優雅反叛。讓我們深入探索那些奶油木質風裡的 Chill 靈魂。
+                </p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-brunch-dark flex items-center justify-center text-white font-bold">M</div>
+                    <div>
+                        <p class="text-sm font-bold">學號：M11408025</p>
+                        <p class="text-xs opacity-50">Published on Oct 24, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Image Placement -->
+            <div class="relative animate-float">
+                <div class="image-container relative z-10">
+                    <img src='https://opal.google/board/blobs/7eeebe4b-4715-4015-b379-a849d2ba0859' alt='Brunch Banner Illustration' />
+                </div>
+                <!-- Card floating effect -->
+                <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-3xl hidden md:block z-20">
+                    <p class="text-xs font-bold text-brunch-accent uppercase mb-2">Illustration Info</p>
+                    <p class="text-sm font-medium leading-snug">捕捉晨間第一道光與<br>「相機先吃」的儀式感</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-6 py-20">
+        
+        <!-- Bento Layout Start -->
+        <div class="bento-grid">
+            
+            <!-- Section 1: Intro -->
+            <div class="bento-item glass-card col-span-12 md:col-span-8 group overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brunch-accent/10 rounded-bl-full transition-all group-hover:scale-150 duration-500"></div>
+                <h2 class="text-3xl font-display font-extrabold mb-6">1. 沒吃到早午餐，我的週末還沒開始！</h2>
+                <div class="text-lg leading-loose opacity-90 space-y-4">
+                    <p>你是不是也覺得，週末早晨那道灑進窗戶的陽光，如果沒有配上一盤滑嫩歐姆蛋和一杯精品拿鐵，這一天就根本不算正式啟動？</p>
+                    <p>在現代都市人的時間表裡，早午餐（Brunch）早就不只是「早餐＋午餐」的數學加總，它更像是一張<strong>「合法賴床」的邀請函</strong>。在這個特定的時空裡，時間感是模糊且彈性的，你可以從早上十點吃到下午兩點，沒人會拿著時鐘催促你。</p>
+                </div>
+            </div>
+
+            <!-- Accent Card -->
+            <div class="bento-item bg-brunch-dark text-white col-span-12 md:col-span-4 flex flex-col justify-center text-center">
+                <span class="text-5xl mb-4">☕️</span>
+                <p class="text-2xl font-display italic">"Brunch is a state of mind."</p>
+            </div>
+
+            <!-- Section 2: Origin -->
+            <div class="bento-item bg-brunch-soft-bg col-span-12 lg:col-span-6">
+                <h2 class="text-3xl font-display font-extrabold mb-6">2. 宿醉者的救星：Brunch 居然是這樣來的？</h2>
+                <div class="space-y-4 text-base opacity-90">
+                    <p>時間回到 1895 年的英國，作家蓋伊·貝林格（Guy Beringer）在《早午餐：一份抗辯》中大聲疾呼：拜託！週日早上別再叫宿醉的人起床去吃那種沉重、嚴肅的禮拜後大餐了！</p>
+                    <p>他建議應該提供一種晚點吃、份量輕盈且能讓人感到愉快滿足的社交餐點，這就是「Brunch」的初衷——為了拯救那些週六狂歡後，渴望在社交中得到撫慰的靈魂。</p>
+                    <div class="mt-6 p-4 border-l-4 border-brunch-accent bg-white/50 rounded-r-xl italic">
+                        謝謝蓋伊，你不僅是文學家，更是全人類懶人界的精神領袖！
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Camera First -->
+            <div class="bento-item glass-card col-span-12 lg:col-span-6 border-2 border-brunch-accent/20">
+                <h2 class="text-3xl font-display font-extrabold mb-6">3. 相機先吃是禮貌！</h2>
+                <p class="mb-6 opacity-80">當前的早午餐界已經演化成一場多感官的美學實驗：</p>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-brunch-accent text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1">1</span>
+                        <p><span class="font-bold">空間哲學：</span>工業風、奶油木質風、侘寂風，旨在提供一種「逃離感」。</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-brunch-accent text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1">2</span>
+                        <p><span class="font-bold">跨界冒險：</span>韓式泡菜班尼迪克蛋或燕麥奶拿鐵，不設限的味覺實驗。</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-brunch-accent text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1">3</span>
+                        <p><span class="font-bold">眼球先行：</span>在社群時代，美感與熱量同樣重要。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Controversy/Price -->
+            <div class="bento-item col-span-12 md:col-span-5 bg-[#EFD3D7] flex flex-col justify-between">
+                <div>
+                    <h2 class="text-3xl font-display font-extrabold mb-4">4. 這盤「蛋和麵包」憑什麼這麼貴？</h2>
+                    <p class="opacity-80">親愛的，你付的這筆錢，本質上是「空間使用權」加上「生活儀式感」的綜合規費。</p>
+                </div>
+                <div class="mt-8 bg-white/40 p-6 rounded-2xl">
+                    <p class="text-sm font-medium">老闆其實壓力很大：裝潢、冷氣、精品豆，這些隱形成本都需要分攤。值得嗎？看 IG 讚數就有答案了 (笑)。</p>
+                </div>
+            </div>
+
+            <!-- Section 5: Future -->
+            <div class="bento-item glass-card col-span-12 md:col-span-7">
+                <h2 class="text-3xl font-display font-extrabold mb-6">5. 未來的早午餐更精彩！</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-4 rounded-2xl bg-white/40">
+                        <h4 class="font-bold text-brunch-accent mb-2">數位遊牧 & 毛家長</h4>
+                        <p class="text-sm opacity-80">更多插座、隔音專區以及專屬的寵物餐點空間。</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/40">
+                        <h4 class="font-bold text-brunch-accent mb-2">All-day Concept</h4>
+                        <p class="text-sm opacity-80">白天是陽光早午餐，晚上轉身變成微醺的小酒館 (Bistro)。</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/40 col-span-full">
+                        <h4 class="font-bold text-brunch-accent mb-2">社區小確幸</h4>
+                        <p class="text-sm opacity-80">回歸在地故事、Farm-to-table 的永續概念與人情味，將是最終歸宿。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bento Layout End -->
+
+        <!-- Conclusion Quote -->
+        <div class="mt-20 text-center max-w-2xl mx-auto animate-fade-in-up">
+            <div class="w-20 h-1 bg-brunch-accent mx-auto mb-10 rounded-full"></div>
+            <p class="text-2xl font-display italic leading-relaxed mb-8">
+                無論世界如何變動，只要週末還有一盤豐盛的早午餐等著我們，生活就還有慢下來的理由。
+            </p>
+            <button class="bg-brunch-dark text-white px-10 py-4 rounded-full font-bold hover:bg-brunch-accent transition-colors duration-300 shadow-xl">
+                下個週日，你想好要去哪裡「合法賴床」了嗎？
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Decorative Bottom Blob -->
+    <div class="relative h-64 w-full overflow-hidden">
+        <svg class="absolute bottom-0 w-[200%] h-full text-brunch-soft-bg fill-current" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,192L48,202.7C96,213,192,235,288,224C384,213,480,171,576,149.3C672,128,768,128,864,149.3C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <script>
+        // Smooth scroll effect for internal layout (if needed)
+        document.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('p-6');
+            } else {
+                nav.classList.add('p-6');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.style.opacity = '0';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
